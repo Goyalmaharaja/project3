@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="style.css">
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registration form </title>
 
     <style>
+        body{
+            background-color: skyblue;
+    background-attachment: fixed;
+        }
 
 .div1{
     width:1000px;
     height: 790px;
     background-image: url("color.jpg");
     opacity: .9;
+    margin: auto;
+    border-radius: 10px;
     
 }
 input{
     border-radius: 8px;
    
     height: 20px;
+    border-style: none;
 }
 
 
@@ -32,7 +39,27 @@ hr{
     height: 2px;
     color: brown;
 }
+#email{
 
+    opacity: .7;
+}
+#pass{
+    
+    opacity: .7;
+}
+#contact{
+    
+    opacity: .7;
+}
+#city{
+    background-color: rgb(137, 209, 209);
+    color: rgb(248, 116, 9);
+    width: 150px;
+    border-radius: 5px;
+}
+#note{
+    opacity: 0.7; ;
+}
 
     </style>
 </head>
@@ -42,16 +69,16 @@ hr{
         <div>
         <h1>Registration Form </h1>
         <h4>Enter your details Below </h4>
-        <form action="">
+        
         <ul>
          
-            <li> &nbsp; &nbsp;<input type="email" name="your_email" id="email" placeholder="your_email@gmail.com"></li> <br>
-            <li>&nbsp; &nbsp;<input type="password" name="your_pass" id="pass" placeholder="Password" min="8" maxlength="20"></li> 
+            <li> &nbsp; &nbsp;E-mail:&nbsp; &nbsp;&nbsp; &nbsp;<input type="email" name="your_email" id="email" placeholder="your_email@gmail.com" required></li> <br>
+            <li>&nbsp; &nbsp;Password:<input type="password" name="your_pass" id="pass" placeholder="Password" min="8" maxlength="20" required></li> 
         </ul>
-    </form>
+    
     <strong> <em>!Type a complex password with 8-20 characters.</em></strong>
     <ul>
-        <li>&nbsp; &nbsp;<input type="number" name="" id="" min="8" maxlength="20" placeholder="+91 "></li>
+        <li>&nbsp; &nbsp;Contact:<input type="number" name="" id="contact" min="8" maxlength="20" placeholder="+91 " required></li>
     
     </ul>
     <hr >
@@ -65,7 +92,7 @@ hr{
         </li>
     </ul>
     <label for="stage">Choose the stage if you are(Student):</label>
-    <select name="" id="">
+    <select name="" id="" required>
         <option value="select">--Select--</option>
     
         <option value="School">School</option>
@@ -74,12 +101,12 @@ hr{
     <hr>
     <ul>
         <li><label for="dob">Enter your Birth date:</label>
-        <input type="date" name="" id=""></li>
+        <input type="date" name="" id="" required ></li>
        
     </ul>
     <hr>
     <ul>
-        <li> &nbsp; &nbsp;   <input type="text" name="" id="" placeholder="any note">
+        <li> &nbsp; &nbsp;Note:(optional)   <input type="text" name="" id="note" placeholder="any note">
         </li>
     </ul>
     <hr>
@@ -88,17 +115,19 @@ hr{
     <input type="radio" name="gender" id="">Female
     <input type="radio" name="gender" id="">Other
     
-    <hr>
-    <label for="city">City</label>
-    <select name="city" id="">
+    <hr> <br>
+    <label for="city">City:&nbsp;&nbsp;</label>
+    <select name="city" id="city">
+        <option value="select" >--Select--</option>
+        
 <option value="delhi">Delhi</option>
 <option value="bangalore">bangalore</option>
 <option value="patna">Patna</option>
 <option value="bihar">Bihar</option>
 <option value="Rajisthan">Rajisthan</option>
 
-    </select>
-    <input type="submit" value="Submit" id="button"> 
+    </select> <br><br><br><br></div>
+    <input type="submit" value="Submit" id="button" style="margin-right: 50px;"> 
     <input type="reset" value="Reset" id="button">
 
 </form>
